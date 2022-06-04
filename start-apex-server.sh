@@ -1,3 +1,4 @@
 #!/bin/sh
 
-nohup npm run start-apex-server & >/dev/null
+nohup node node_modules/.bin/start-apex-server >/dev/null 2>&1 &
+sleep 2

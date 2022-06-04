@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stop-server": "stop-apex-server",
+    "start-apex-server": "start-apex-server",
+    "stop-apex-server": "stop-apex-server",
     "prepare": "husky install"
   },
   "author": "",
@@ -19,8 +20,8 @@
   "lint-staged": {
     "*.{cls,trigger}": [
       "./start-apex-server.sh",
-      "prettier --write",
-      "npm run stop-server"
+      "prettier --apex-standalone-parser built-in --write",
+      "npm run stop-apex-server"
     ]
   }
 }
